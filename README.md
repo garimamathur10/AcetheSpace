@@ -2,49 +2,47 @@
 
 ### Project Overview
 
-This project builds a resume scoring and job recommendation system that matches resumes to relevant job descriptions using ****BERT embeddings**** for semantic text representation. It preprocesses resumes and job descriptions with NLP techniques, calculates similarity scores, and recommends the top 3 job matches based on cosine similarity.
+#### Introduction
+In today’s fast-paced job market, having a resume that meets employer expectations is essential. Our
+recommendation system helps bridge the gap between what candidates offer and what employers need. By
+analysing resumes through advanced algorithms, we evaluate skills, experience, and education, comparing
+them with current job market trends. Our solution doesn’t just identify areas for improvement, it provides
+practical suggestions, like skills to acquire or achievements to highlight, helping candidates stand out. With
+features like detailed resume analysis, market trend comparisons, and personalized recommendations, we
+make it easier for job seekers to craft resumes that truly align with in-demand roles. Future updates will
+bring real-time insights to keep candidates ahead in the ever-changing job landscape.
 
-The model is evaluated using ****accuracy**** and ****precision****, and a ****Random Forest Classifier**** predicts job titles for resumes. This solution efficiently pairs candidates with suitable job opportunities.
-#
-### Procedure Overview
+#### Objectives
+1. Automate Resume Scoring – Use Natural Language Processing (NLP) to extract and analyse skills,
+job titles, and experience from resumes.
+2. Enhance Candidate-Job Matching – Implement machine learning models to match resumes with the
+most relevant job descriptions based on skill similarity and job role alignment.
+3. Identify Skill Gaps – Highlight missing skills in resumes that are required for top job matches, helping
+candidates upskill and improve job readiness.
+4. Optimize Recruitment Efficiency – Reduce the manual effort in shortlisting candidates, enabling
+recruiters to focus on high-potential profiles.
+5. Provide Personalized Job Recommendations – Suggest the top 5 most suitable job roles for each
+candidate based on their resume content and job market trends.
+6. Evaluate & Improve Matching Accuracy – Measure model performance using accuracy, precision,
+recall, and F1-score, ensuring high-quality recommendations.
 
-#### 1. Exploratory Data Analysis (EDA)
-Our EDA consisted of:
+#### WorkFlow of the Project
+<img width="1039" alt="Screenshot 2025-03-25 at 13 39 10" src="https://github.com/user-attachments/assets/93f6e314-bffb-4afa-a00c-110b11b141d2" />
 
-1. ***Text Length Distribution***
-   - It calculates the length of resumes and job descriptions (number of words) and plots histograms of the distributions.
-This will give an idea of how long the text data is in each column.
 
-3. ***Word Clouds***
-   - It generates a word cloud for both resumes and job descriptions using the WordCloud library.
-This will give a visualize look of the most frequent words in both datasets.
+# EDA
+1. Most Required Skills in Job Descriptions
+<img width="474" alt="Screenshot 2025-03-25 at 13 36 52" src="https://github.com/user-attachments/assets/197485d2-1e55-429d-8218-a7a8cef8e0af" />
 
-5. ***Skills Count***:
-    - It computes the number of skills mentioned in each resume and job description and prints the statistical summary for each.
+2. Most Frequent Skills in Resumes
+<img width="474" alt="Screenshot 2025-03-25 at 13 37 19" src="https://github.com/user-attachments/assets/9011aeac-fe1d-4833-bb4b-56e14c12f886" />
 
-7. ***Data types and descriptive statistics***
-   - Understanding the structure of both the dataset.
+3. Word Cloud of Skills in Resumes and Job Descriptions
+<img width="895" alt="Screenshot 2025-03-25 at 13 38 16" src="https://github.com/user-attachments/assets/b4616960-74ab-4da9-93f1-fd87de0f276a" />
 
-#### 2. Feature Engineering
-Feature Engineering for Resume Scoring and Job Recommendation System:
+#### Model Performance
+<img width="786" alt="Screenshot 2025-03-25 at 13 40 24" src="https://github.com/user-attachments/assets/e163fe09-e5e2-49a0-81ab-a86aa807cab4" />
 
-1. ***Text Preprocessing***: 
-   - Applied ****tokenization****, ****lowercasing****, ****stopword removal****, and ****lemmatization**** to clean and standardize both resumes and job descriptions.
 
-2. ***BERT Embeddings***: 
-   - Used **BERT** to generate contextualized embeddings for both resumes and job descriptions, representing them as fixed-size vectors for deeper semantic understanding.
-
-3. ***Cosine Similarity***: 
-   - Calculated ****cosine similarity scores**** between resume embeddings and job description embeddings to measure and rank the relevance of job recommendations.
-
-4. ***Combined Skills***: 
-   - Merged the ****skills**** from both resumes and job descriptions into a single feature for better matching.
-
-5. ***Top 3 Job Recommendations***: 
-   - Extracted the ****top 3 unique job recommendations**** based on the highest similarity scores to ensure diverse and relevant job matches.
-#
-### Data Visualizations
-![d1](https://github.com/user-attachments/assets/c87cf629-c350-4e63-b290-2be5a468a426)
-![d2](https://github.com/user-attachments/assets/737b0848-b033-4bf7-b797-cb4da6d5e587)
-![d3](https://github.com/user-attachments/assets/0e43af86-89d3-4b8e-8ecf-f1750d910027)
-![d4](https://github.com/user-attachments/assets/6109a8c4-0197-4bda-92e6-acf7d90479d7)
+#### Results
+<img width="893" alt="Screenshot 2025-03-25 at 13 40 44" src="https://github.com/user-attachments/assets/3af1f627-5e64-4102-a4b0-d73ae87e6107" />
